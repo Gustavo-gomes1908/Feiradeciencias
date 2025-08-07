@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <title>Anotações da Água (sem JavaScript)</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #e0f7fa;
+      margin: 0;
+      padding: 20px;
+    }
+
+    .container {
+      max-width: 600px;
+      margin: auto;
+      background: #fff;
+      padding: 20px;
+      border-radius: 10px;
+      box-shadow: 0px 0px 10px rgba(0,0,0,0.1);
+    }
+
+    h1 {
+      text-align: center;
+      color: #006064;
+    }
+
+    form {
+      display: flex;
+      flex-direction: column;
+    }
+
+    label {
+      margin-top: 15px;
+      font-weight: bold;
+    }
+
+    input, textarea {
+      padding: 8px;
+      border-radius: 5px;
+      border: 1px solid #ccc;
+      margin-top: 5px;
+    }
+
+    button {
+      margin-top: 20px;
+      padding: 10px;
+      background-color: #00796b;
+      color: white;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+
+    button:hover {
+      background-color: #004d40;
+    }
+
+    .info {
+      text-align: center;
+      margin-top: 30px;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Registro de Qualidade da Água 💧</h1>
+    <form method="post" action="#">
+      <label for="amostra">Nome da Amostra:</label>
+      <input type="text" id="amostra" name="amostra" required>
+
+      <label for="ph">pH:</label>
+      <input type="number" id="ph" name="ph" step="0.01" required>
+
+      <label for="temperatura">Temperatura (°C):</label>
+      <input type="number" id="temperatura" name="temperatura" step="0.1" required>
+
+      <label for="turbidez">Turbidez (NTU):</label>
+      <input type="number" id="turbidez" name="turbidez" step="0.1" required>
+
+      <label for="observacoes">Observações:</label>
+      <textarea id="observacoes" name="observacoes" rows="4"></textarea>
+
+      <button type="submit">Salvar / Imprimir</button>
+    </form>
+
+    <p class="info">Preencha os dados e use <strong>Ctrl+P</strong> para imprimir ou salvar em PDF.</p>
+  </div>
+</body>
+</html>
+
